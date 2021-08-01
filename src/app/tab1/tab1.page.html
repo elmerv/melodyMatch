@@ -3,24 +3,33 @@
     <ion-title>
       Tab 1
     </ion-title>  
-    <ion-searchbar showCancelButton="focus" (ionChange)="_ionChange($event)" ></ion-searchbar>
+    <!-- <ion-searchbar showCancelButton="focus" (ionChange)="_ionChange($event)" ></ion-searchbar> -->
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
   </ion-header>
+  <div id="rectangle1"> <img src="https://freesvg.org/img/TheresaKnott_Drum_Kit_3.png" alt="" >
+  </div>
+  <div id="rectangle2"> </div>
+  <div id="rectangle3"> </div>
 
   
-  <ion-slides [options]= "option" class= "ion-margin" >
+  <ion-slides [options]= "option" id= "featuredArtists" >
     <ion-slide *ngFor = "let artist of artist"> 
       <a href={{route}}>
         <img src ={{artist.picture}} class = "profilePictures">
-        <h2>{{artist.name}}</h2>
-        <b>{{artist.about}}</b>
+        <h2 class = "name">{{artist.name}}</h2>
+        <b class="desc">{{artist.about}}</b>
       </a>
     </ion-slide>
   </ion-slides>
   
+
+
+
+
+
 </ion-content>
 

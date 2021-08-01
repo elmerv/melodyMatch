@@ -4,7 +4,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content *ngFor = "let artist of artist">
   <img src={{artist.picture}} alt="" id="profilepic">
   <h2 id="name"> {{artist.name}}</h2>
   <p class="bio"> {{artist.about}}</p>
