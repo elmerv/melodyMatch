@@ -10,23 +10,33 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
   </ion-header>
-  <div id="rectangle1"> <img src="https://freesvg.org/img/TheresaKnott_Drum_Kit_3.png" alt="" >
+  <div id="categories">
+  <div id="rectangle1">
+     <!-- <img src="https://freesvg.org/img/TheresaKnott_Drum_Kit_3.png" alt="" > -->
   </div>
   <div id="rectangle2"> </div>
   <div id="rectangle3"> </div>
-
+</div>
+  
+  <ion-slides [options]= "option" id= "featuredArtists" >
+    <ion-slide *ngFor = "let artist of artist"> 
+      <!-- <a href={{route}}> -->
+        <img src ={{artist.picture}} class = "profilePictures" >
+        <h2 class = "name" [routerLink] = "['../../profile']"> {{artist.name}}</h2>
+        <b class="desc">{{artist.about}}</b>
+      <!-- </a> -->
+    </ion-slide>
+  </ion-slides>
   
   <ion-slides [options]= "option" id= "featuredArtists" >
     <ion-slide *ngFor = "let artist of artist"> 
       <a href={{route}}>
-        <img src ={{artist.picture}} class = "profilePictures">
-        <h2 class = "name">{{artist.name}}</h2>
-        <b class="desc">{{artist.about}}</b>
+        <img src ={{artist.albumPhoto}} class = "albumPhoto">
+        <h2 class = "name">{{artist.albumName}}</h2>
+        <!-- <b class="desc">{{artist.about}}</b> -->
       </a>
     </ion-slide>
   </ion-slides>
-  
-
 
 
 

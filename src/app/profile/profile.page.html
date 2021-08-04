@@ -1,13 +1,30 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar>
-    <ion-title>profile</ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content *ngFor = "let artist of artist">
-  <img src={{artist.picture}} alt="" id="profilepic">
-  <h2 id="name"> {{artist.name}}</h2>
-  <p class="bio"> {{artist.about}}</p>
-  <p>check {{artist.name}}</p>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content >
+<img src="https://cdn.discordapp.com/attachments/871124798737121300/871124862985470003/5E555189-06E6-49A8-90F6-442DA94F7CCC.jpeg" alt="">
+<h2>MelloedMusic</h2>
+<h1>Los Angeles</h1>
+<!-- <audio controls>
+<source src="../../assets/music/Shalamar - This Is For The Lover In You.mp3" type="audio/ogg">
+</audio> -->
+
+<ion-list>
+  <ion-item *ngFor = "let track of playList">
+    <p>
+      {{track.name}}
+    </p>
+    <ion-icon name="play-outline" (click) = "togglePlayer(false,track)" *ngIf = "!track.isPlaying "></ion-icon>
+    <ion-icon name="pause-circle-outline" (click) = "togglePlayer(true,track)" *ngIf = "track.isPlaying "></ion-icon>
+    
+    <ion-range max="100"></ion-range>
+  </ion-item>
+</ion-list>
+<angular-file-uploader
+      [config]="afuConfig">
+</angular-file-uploader>
  <!-- <video src="https://www.youtube.com/watch?v=cbXy8Yc1Xyw"></video> -->
 </ion-content>

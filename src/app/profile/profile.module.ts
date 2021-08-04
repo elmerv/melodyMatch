@@ -8,12 +8,15 @@ import { ProfilePageRoutingModule } from './profile-routing.module';
 
 import { ProfilePage } from './profile.page';
 
+import { AngularFileUploaderModule } from "angular-file-uploader";
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ProfilePageRoutingModule
+    ProfilePageRoutingModule,
+    AngularFileUploaderModule
   ],
   declarations: [ProfilePage]
 })
