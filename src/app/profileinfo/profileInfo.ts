@@ -15,7 +15,8 @@ let artist: any [] = [
         type: "guitarist",
         about: "guitarist",
         route:"#",
-        album:""
+        album:"",
+        albumPhoto: "https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Drake_-_Take_Care_cover.jpg/220px-Drake_-_Take_Care_cover.jpg"
       },
       { name: "Jason", 
         picture: "https://st4.depositphotos.com/12982378/22072/i/600/depositphotos_220729084-stock-photo-smiling-adult-man-crossed-arms.jpg",

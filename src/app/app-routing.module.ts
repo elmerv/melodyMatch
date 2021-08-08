@@ -13,6 +13,14 @@ const routes: Routes = [
   {
     path: 'profile',
     loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
+  },
+  {
+    path: 'messages',
+    loadChildren: () => import('./messages/messages.module').then( m => m.MessagesPageModule)
+  },
+  {
+    path: 'music-uploader',
+    loadChildren: () => import('./music-uploader/music-uploader.module').then( m => m.MusicUploaderPageModule)
   }
 ];
 @NgModule({

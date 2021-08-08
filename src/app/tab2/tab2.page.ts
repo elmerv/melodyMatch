@@ -7,12 +7,21 @@ import { Component } from '@angular/core';
 })
 export class Tab2Page {
 
-  blogs : String[] = [];
-  currentInput;
-  constructor() {}
-  addBlog(){
-    this.blogs.push(this.currentInput);
-  }
   ngOnInit() {
   }
-}
+ blogs : string[] = [];
+  currentInput;
+  currentInput2;
+  constructor() {}
+  addBlog(){
+
+
+  let finalBlog: any ={
+    currentInput:this.currentInput,
+   currentInput2:this.currentInput2
+  }
+ this.blogs.push(finalBlog);
+
+ this.currentInput ="";
+ this.currentInput2 = "";
+}}

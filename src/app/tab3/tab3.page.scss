@@ -1,0 +1,72 @@
+ion-content {
+    --background: url('../../assets/Images/laser-dj-lights-1024x720.jpeg') no-repeat top center/cover fixed, #fff;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+ion-toolbar {
+    background: transparent;
+}
+
+ion-chip {
+    --background: #4287f5;
+    --color: #fff;
+}
+
+
+.card {
+    margin: 0 auto;
+
+    .header {
+        height: 200px;
+
+        .avatar {
+            width: 160px;
+            height: 160px;
+            position: relative;
+            margin: 0 auto;
+
+            img {
+                display: block;
+                border-radius: 50%;
+                position: absolute;
+                bottom: calc(-1*(80px + 4px));
+                border: 8px solid #4287f5;
+                background-color: #fff;
+            }
+        }
+    }
+}
+
+.card-body {
+    background-color: #ffffff;
+    padding: 30px;
+    height: 100%;
+    overflow: hidden;
+
+    .user-meta {
+        padding-top: 40px;
+
+        .profileName {
+            font-size: 24px;
+            font-weight: 600;
+            color: #303940;
+        }
+
+        .profileDescription {
+            font-size: 90%;
+            color: #949ea6;
+            text-transform: uppercase;
+            margin: 0 auto;
+        }
+    }
+}
+.ranking{
+    color: black;
+}
+
+.songList{
+    background-color: khaki;
+}
+

@@ -1,10 +1,10 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>  
+  <!-- <ion-toolbar> -->
+    <!-- <ion-title> -->
+      <!-- Tab 1 -->
+    <!-- </ion-title>   -->
     <!-- <ion-searchbar showCancelButton="focus" (ionChange)="_ionChange($event)" ></ion-searchbar> -->
-  </ion-toolbar>
+  <!-- </ion-toolbar> -->
 </ion-header>
 
 <ion-content [fullscreen]="true">
@@ -19,17 +19,17 @@
 </div>
   
   <ion-slides [options]= "option" id= "featuredArtists" >
-    <ion-slide *ngFor = "let artist of artist"> 
-      <!-- <a href={{route}}> -->
-        <img src ={{artist.picture}} class = "profilePictures" >
+    <ion-slide *ngFor = "let artist of artist" id="eachSlide"> 
+      <a href={{route}}>
+        <img src ={{artist.picture}} class = "profilePictures" [routerLink] = "['../../profile']" >
         <h2 class = "name" [routerLink] = "['../../profile']"> {{artist.name}}</h2>
         <b class="desc">{{artist.about}}</b>
-      <!-- </a> -->
+      </a>
     </ion-slide>
   </ion-slides>
   
   <ion-slides [options]= "option" id= "featuredArtists" >
-    <ion-slide *ngFor = "let artist of artist"> 
+    <ion-slide *ngFor = "let artist of artist"  id="eachSlide"> 
       <a href={{route}}>
         <img src ={{artist.albumPhoto}} class = "albumPhoto">
         <h2 class = "name">{{artist.albumName}}</h2>

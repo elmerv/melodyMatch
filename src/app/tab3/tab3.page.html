@@ -4,14 +4,67 @@
       Tab 3
     </ion-title>
   </ion-toolbar>
+  
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<ion-content [fullscreen]="true" >
+  <!-- <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Tab 3</ion-title>
     </ion-toolbar>
-  </ion-header>
+  </ion-header> -->
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+<ion-fab horizontal="end" vertical="top" slot="fixed">
+              <ion-fab-button color="danger" [routerLink] = "['/music-uploader']">
+                <ion-icon name="add"></ion-icon>
+                <ion-icon name="musical-notes-outline"></ion-icon>
+              </ion-fab-button>
+            </ion-fab>
+  
+
+  <div class="card">
+    <div class="header">
+      <div class="avatar">
+        <img src="../../assets/Images/IMG_0866.JPG" alt="">
+      </div>
+    </div>
+  </div>
+
+  <div class="card-body">
+    <div class="user-meta ion-text-center">
+      <h3 class="profileName">Tayshaun Kelly</h3>
+      <h5 class="profileDescription">The most important thing, number one, is you gotta get rid of doubt. If you got doubt in what you're doing, it's not gonna work and the way to do that is you have a plan.  
+        
+      </h5>
+         <ion-chip>
+        <ion-label>Dj</ion-label>
+        </ion-chip>
+        <ion-chip>
+          <ion-label>Producer</ion-label>
+          </ion-chip>
+          <ion-chip>
+            <ion-label>Singer</ion-label>
+            </ion-chip>
+
+            
+</div>
+
+   
+              
+                <ion-card *ngFor="let track of files | async">
+                  <ion-card-title>{{track.audioTitle}}</ion-card-title>
+                  <ion-card-content>{{track.audioDescription}}</ion-card-content>
+                  <ion-item> 
+                  <ion-icon name="play-outline" (click)="togglePlayer(false,track)" *ngIf="!track.isPlaying "></ion-icon>
+                  <ion-icon name="pause-circle-outline" (click)="togglePlayer(true,track)" *ngIf="track.isPlaying "></ion-icon>
+               
+                <ion-range max="100" name={{track.filePath}} #range [(ngModel)]="track.progress" (touchend)="seek(track)"
+                  (mouseup)="seek(track)"></ion-range>
+                </ion-item> 
+              </ion-card>
+            
+    </div>
 </ion-content>
+
+
+
