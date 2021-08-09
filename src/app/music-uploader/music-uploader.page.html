@@ -8,22 +8,22 @@
 <ion-content>  
   
   <ion-item>
-    <ion-label position="floating" >Floating Label</ion-label>
+    <ion-label position="floating" >Song Name</ion-label>
     <ion-input [(ngModel)] = "audioTitle" ></ion-input>
   </ion-item>
 
   <ion-item>
-    <ion-label position="stacked" >Textarea</ion-label>
-    <ion-textarea placeholder="placeholder" [(ngModel)] = "audioDescription" ></ion-textarea>
+    <ion-label position="stacked" ></ion-label>
+    <ion-textarea placeholder="Description" [(ngModel)] = "audioDescription" ></ion-textarea>
   </ion-item>
  
 
   <ion-card *ngIf="!isAudioUploading && !isAudioUploaded" class="uploader">
-    <ion-card-header>
-      <ion-card-title>Select File</ion-card-title>
+    <ion-card-header color = "medium">
+      <ion-card-title id = "selectFile" >Select File</ion-card-title>
     </ion-card-header>
 
-    <ion-button color="danger">
+    <ion-button color="primary" id="uploadBanner">
       <input type="file" class="upload" (change)="fileUpload($event.target.files)" />
     </ion-button>
   </ion-card>

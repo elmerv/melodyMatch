@@ -1,34 +1,32 @@
-#rectangle1{
+#guitar{
   position: absolute;
-  height: 100px;
-  width: 180px;
-  background-color: honeydew;
+  height: 80px;
+  width: 110px;
+  
   top: 20px;
-  left: 13px;
+  left: 30px;
   border-radius: 10px; 
 }
 
 
 
-#rectangle2{
+#drums{
   position: absolute;
   height: 100px;
-  width: 180px;
-  background: honeydew;
+  width: 110px;
   top: 20px;
-  left: 240px;
+  left: 150px;
   right: 36.27%;
   border-radius: 10px; 
 
 }
 
-#rectangle3{
+#piano{
   position: absolute;
   height: 100px;
-  width: 180px;
-  background: honeydew;
-  top: 20px;
-  left: 13px;
+  width: 110px; 
+   top: 20px;
+  right: 13px;
   border-radius: 10px; 
 }
 

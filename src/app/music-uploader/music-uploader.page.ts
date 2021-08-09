@@ -3,6 +3,8 @@ import { AngularFireStorage, AngularFireUploadTask } from '@angular/fire/storage
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { finalize, tap } from 'rxjs/operators';
+import {Router} from '@angular/router';
+
 
 export interface FILE {
   name: string;
@@ -42,7 +44,8 @@ export class MusicUploaderPage implements OnInit {
   
   private ngFirestoreCollection: AngularFirestoreCollection<FILE>;
 
-  constructor( private angularFirestore: AngularFirestore,
+  constructor( private angularFirestore: AngularFirestore,  private router: Router,
+
     private angularFireStorage: AngularFireStorage) {
       this.isAudioUploading = false;
       this.isAuidoUploaded = false;
@@ -81,6 +84,7 @@ export class MusicUploaderPage implements OnInit {
             });
             this.isAudioUploading = false;
             this.isAuidoUploaded = true;
+            this.router.navigateByUrl('/tab3');
           },error => {
             console.log(error);
           })

@@ -21,7 +21,11 @@ const routes: Routes = [
   {
     path: 'music-uploader',
     loadChildren: () => import('./music-uploader/music-uploader.module').then( m => m.MusicUploaderPageModule)
-  }
+  },
+  {
+    path: 'tab3',
+    loadChildren: () => import('./tab3/tab3.module').then( m => m.Tab3PageModule)
+  },
 ];
 @NgModule({
   imports: [

@@ -11,12 +11,17 @@
   <ion-header collapse="condense">
   </ion-header>
   <div id="categories">
-  <div id="rectangle1">
-     <!-- <img src="https://freesvg.org/img/TheresaKnott_Drum_Kit_3.png" alt="" > -->
+  <div id="guitar">
+     <img src="../../assets/Images/Guitar.png" alt="" >
   </div>
-  <div id="rectangle2"> </div>
-  <div id="rectangle3"> </div>
+  <div id="drums">
+    <img src="../../assets/Images/drums.png" alt="" > 
+  </div>
+  <div id="piano"> 
+    <img src="../../assets/Images/piano.png" alt="" >
+  </div>
 </div>
+<!-- <ion-card> <img src="https://www.pikpng.com/pngl/m/290-2902633_transparent-drum-set-transparent-background-drum-set-high.png" alt=""> </ion-card> -->
   
   <ion-slides [options]= "option" id= "featuredArtists" >
     <ion-slide *ngFor = "let artist of artist" id="eachSlide"> 

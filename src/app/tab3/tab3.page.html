@@ -15,7 +15,7 @@
   </ion-header> -->
 
 <ion-fab horizontal="end" vertical="top" slot="fixed">
-              <ion-fab-button color="danger" [routerLink] = "['/music-uploader']">
+              <ion-fab-button color="primary" [routerLink] = "['/music-uploader']">
                 <ion-icon name="add"></ion-icon>
                 <ion-icon name="musical-notes-outline"></ion-icon>
               </ion-fab-button>
@@ -51,9 +51,9 @@
 
    
               
-                <ion-card *ngFor="let track of files | async">
-                  <ion-card-title>{{track.audioTitle}}</ion-card-title>
-                  <ion-card-content>{{track.audioDescription}}</ion-card-content>
+                <ion-card *ngFor="let track of files | async" color="dark"> 
+                  <ion-card-title class="musicText" id="audioTitle">{{track.audioTitle}}</ion-card-title>
+                  <ion-card-content class="musicText" id="audioDesc ">{{track.audioDescription}}</ion-card-content>
                   <ion-item> 
                   <ion-icon name="play-outline" (click)="togglePlayer(false,track)" *ngIf="!track.isPlaying "></ion-icon>
                   <ion-icon name="pause-circle-outline" (click)="togglePlayer(true,track)" *ngIf="track.isPlaying "></ion-icon>
