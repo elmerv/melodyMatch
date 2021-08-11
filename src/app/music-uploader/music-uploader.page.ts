@@ -14,6 +14,7 @@ export interface FILE {
   audioDescription:string;
   isPlaying:boolean;
   progress: number;
+  imageUrl:string;
 }
 
 @Component({
@@ -50,7 +51,7 @@ export class MusicUploaderPage implements OnInit {
       this.isAudioUploading = false;
       this.isAuidoUploaded = false;
 
-      this.ngFirestoreCollection = angularFirestore.collection<FILE>('filesCollection');
+      this.ngFirestoreCollection = angularFirestore.collection<FILE>('soundbytesCollection');
       this.files = this.ngFirestoreCollection.valueChanges();
      }
      fileUpload(event: FileList){
@@ -80,7 +81,8 @@ export class MusicUploaderPage implements OnInit {
               audioTitle:this.audioTitle,
               audioDescription:this.audioDescription,
               isPlaying: false,
-              progress:0
+              progress:0,
+              imageUrl:"../../assets/images/A96926CD-8461-452F-ABC5-E87935039CF1.jpeg",
             });
             this.isAudioUploading = false;
             this.isAuidoUploaded = true;

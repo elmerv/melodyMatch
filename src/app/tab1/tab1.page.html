@@ -1,44 +1,29 @@
 <ion-header [translucent]="true">
-  <!-- <ion-toolbar> -->
-    <!-- <ion-title> -->
-      <!-- Tab 1 -->
-    <!-- </ion-title>   -->
-    <!-- <ion-searchbar showCancelButton="focus" (ionChange)="_ionChange($event)" ></ion-searchbar> -->
-  <!-- </ion-toolbar> -->
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
   </ion-header>
-  <div id="categories">
-  <div id="guitar">
-     <img src="../../assets/Images/Guitar.png" alt="" >
-  </div>
-  <div id="drums">
-    <img src="../../assets/Images/drums.png" alt="" > 
-  </div>
-  <div id="piano"> 
-    <img src="../../assets/Images/piano.png" alt="" >
-  </div>
-</div>
-<!-- <ion-card> <img src="https://www.pikpng.com/pngl/m/290-2902633_transparent-drum-set-transparent-background-drum-set-high.png" alt=""> </ion-card> -->
-  
-  <ion-slides [options]= "option" id= "featuredArtists" >
-    <ion-slide *ngFor = "let artist of artist" id="eachSlide"> 
-      <a href={{route}}>
-        <img src ={{artist.picture}} class = "profilePictures" [routerLink] = "['../../profile']" >
-        <h2 class = "name" [routerLink] = "['../../profile']"> {{artist.name}}</h2>
-        <b class="desc">{{artist.about}}</b>
-      </a>
+ 
+
+
+
+  <ion-slides [options]="option" id="featuredArtists" [routerLink] = "['/soundbytes']">
+    <ion-slide *ngFor="let keys of instruments" id="eachSlide">
+      <a>
+
+      <img src={{keys.photo}} class="artistPhoto">
+      <h2 class="name">{{keys.name}}</h2>
+    </a>
     </ion-slide>
   </ion-slides>
-  
-  <ion-slides [options]= "option" id= "featuredArtists" >
-    <ion-slide *ngFor = "let artist of artist"  id="eachSlide"> 
-      <a href={{route}}>
-        <img src ={{artist.albumPhoto}} class = "albumPhoto">
-        <h2 class = "name">{{artist.albumName}}</h2>
-        <!-- <b class="desc">{{artist.about}}</b> -->
+
+
+  <ion-slides [options]="option" id="featuredArtists">
+    <ion-slide *ngFor="let keys of genres" id="eachSlide">
+      <a>
+        <img src={{keys.photo}} class="albumPhoto">
+        <h2 class="name">{{keys.name}}</h2>
       </a>
     </ion-slide>
   </ion-slides>
@@ -47,4 +32,3 @@
 
 
 </ion-content>
-

@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, QueryList,ViewChildren } from '@angular/core';
-import artist from '../profileinfo/profileInfo';
+import keys from '../profileinfo/profileInfo';
 import { Howl } from 'howler';
 import { ParseSourceSpan } from '@angular/compiler';
 import { IonRange } from '@ionic/angular';
@@ -66,7 +66,7 @@ export class ProfilePage implements OnInit {
   activeTrack: Track = null;
   player: Howl = null;
 
- artist: any[] = artist;
+ artist: any[] = keys.key3;
 
   constructor(private angularFireStore: AngularFirestore ) {
     this.ngFirestoreCollection = angularFireStore.collection<Track>('filesCollection');
