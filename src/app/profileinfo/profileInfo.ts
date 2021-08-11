@@ -16,14 +16,57 @@ let artist: any [] = [
         about: "guitarist",
         route:"#",
         album:"",
-        albumPhoto: "https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Drake_-_Take_Care_cover.jpg/220px-Drake_-_Take_Care_cover.jpg"
+        albumName:"Chances -Andre Depreist",
+        albumPhoto: "https://i.scdn.co/image/ab67616d0000b273e6237c3af18c790c78d43102"
       },
       { name: "Jason", 
         picture: "https://st4.depositphotos.com/12982378/22072/i/600/depositphotos_220729084-stock-photo-smiling-adult-man-crossed-arms.jpg",
         type: "pianoist",
         about: "Pianoist",
         route:"#",
+        albumName:"Do Or Die- Jey",
+        albumPhoto:"https://i1.sndcdn.com/artworks-4q5sVPAcqiW5ZVlH-GMyH9w-t240x240.jpg",
         album:""
       },
   ];
-  export default artist;
+
+  let instruments: any =[ 
+    {
+      name:"Guitar",
+      photo:"https://online.berklee.edu/takenote/wp-content/uploads/2020/07/learn_acoustic_blues_guitar_article_image.jpg",
+    },
+    {
+      name:"Drums",
+      photo:"https://cdn.technologynetworks.com/tn/images/thumbs/jpeg/640_360/how-playing-the-drums-changes-the-brain-328265.jpg",
+    },
+    {
+      name:"Piano",
+      photo:"https://www.pianogallery.com/wp-content/uploads/2018/04/How-to-Describe-Sound-of-Piano.jpg",
+    }
+      // vocalistPhoto:"",
+      // dj:"",
+
+    ];
+
+let genres: any = [
+  {
+    name:"hipHop",
+    photo:"https://www.djmikebills.com/media/k2/items/cache/f75f45065e491a3adc61e72a384867bb_L.jpg",
+  },
+  {
+    name:"rnb",
+    photo:"https://direct.rhapsody.com/imageserver/images/alb.323708239/600x600.jpg",
+  },
+  {
+    name:"rock",
+    photo:"https://s01.sgp1.cdn.digitaloceanspaces.com/article/106521-ibugdylfkr-1543134227.jpg",
+    // urbanPhoto:"",
+    // jazzPhoto:"",
+  }
+  ];
+let keys = {
+  key1:instruments,
+  key2:genres,
+  key3:artist
+}
+  export default keys;

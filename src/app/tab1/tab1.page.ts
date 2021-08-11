@@ -1,13 +1,16 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonSearchbar } from '@ionic/angular';
-import artist from '../profileinfo/profileInfo';
+import keys from '../profileinfo/profileInfo';
+import { faGuitar } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
-  artist: any[] = artist;
+  instruments: any[] = keys.key1;
+  genres: any[] = keys.key2;
+  faGuitar = faGuitar;
   @ViewChild('search', {static: false}) search: IonSearchbar;
     public list: Array<object> = [];
     private searchedItem: any;

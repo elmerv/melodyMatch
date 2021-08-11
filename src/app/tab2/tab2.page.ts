@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import keys from '../profileinfo/profileInfo';
 
 @Component({
   selector: 'app-tab2',
@@ -6,7 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
-
+  artist: any[] = keys.key3;
   ngOnInit() {
   }
  blogs : string[] = [];

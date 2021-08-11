@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import artist from '../profileinfo/profileInfo';
+import keys from '../profileinfo/profileInfo';
 
 
 @Component({
@@ -8,10 +8,28 @@ import artist from '../profileinfo/profileInfo';
   styleUrls: ['./messages.page.scss'],
 })
 export class MessagesPage implements OnInit {
-  artist: any[] = artist;
-  constructor() { }
+  
+  
+  artist: any[] = keys.key3;
+ngOnInit(){
 
-  ngOnInit() {
+}
+
+  blogs : string[] = [];
+  currentInput;
+  currentInput2;
+  constructor() {}
+  addBlog(){
+
+
+  let finalBlog: any ={
+    currentInput:this.currentInput,
+   currentInput2:this.currentInput2
   }
+ this.blogs.push(finalBlog);
 
+ this.currentInput ="";
+ this.currentInput2 = "";
+
+}
 }
