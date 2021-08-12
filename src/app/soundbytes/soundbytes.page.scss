@@ -12,14 +12,17 @@ ion-item {
     --border-width: 0;
     --inner-border-width: 0;
     color:white;
-    display: inline-block;
 }
 .imageItem{
     border-bottom: none !important;
+    display: inline-block !important;
 }
 .title{
     font-family: 'Hind', sans-serif;
     margin-left: 6%;
+    font-weight: 500;
+    margin-bottom: 0;
+    margin-left:5%;
 }
 .profilePic{
     width: 100px;
@@ -28,6 +31,14 @@ ion-item {
     margin-top:5%;
 }
 .messageButton{
-    width:45%;
-    --ion-background-color: purple;
+    width:75%;
+    height: 45px;
+    // margin-top: 20%;
+    margin-left:4%;
+    --background: #6910FA;
+}
+.musicSlider{
+    --bar-background: #6910FA;
+}
+.userName{
 }

@@ -7,11 +7,16 @@
 
 <ion-content>
   <ion-card class = "cards" *ngFor="let track of files | async" color="dark">
+
     <ion-item class = "imageItem">
-        <img class = "profilePic" src="{{track.imageUrl}}" />
+
+
+      <img class = "profilePic" src="{{track.imageUrl}}" [routerLink] = "['/userprofile']"/>
+      <h4 class = "userName">{{track.userName}}</h4>
 
     </ion-item>
-      <ion-button class = "messageButton">
+
+      <ion-button  [routerLink] = "['/messages']" class = "messageButton">
          Message
         <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
       </ion-button> 
@@ -21,7 +26,7 @@
         <ion-icon name="play" (click)="togglePlayer(false,track)" *ngIf="!track.isPlaying"></ion-icon>
         <ion-icon name="pause" (click)="togglePlayer(true,track)" *ngIf="track.isPlaying "></ion-icon>
 
-        <ion-range max="100" name="{{track.filePath}}" #range [(ngModel)]="track.progress" (touchend)="seek(track)"
+        <ion-range class = "musicSlider" max="100" name="{{track.filePath}}" #range [(ngModel)]="track.progress" (touchend)="seek(track)"
           (mouseup)="seek(track)"></ion-range>
     </ion-item>
   </ion-card>

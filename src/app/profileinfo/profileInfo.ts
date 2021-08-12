@@ -41,7 +41,7 @@ let artist: any [] = [
     },
     {
       name:"Piano",
-      phot:"https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
+      photo:"https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGlhbm98ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80",
     }
 
     ];

@@ -13,7 +13,6 @@ export interface Track {
   isPlaying: boolean;
   progress: number;
   audioTitle:string;
-  audioDescription:string;
 }
 
 
@@ -40,7 +39,7 @@ private ngFirestoreCollection: AngularFirestoreCollection<Track>;
 
 
   constructor(private angularFireStore: AngularFirestore){
-    this.ngFirestoreCollection = angularFireStore.collection<Track>('filesCollection');
+    this.ngFirestoreCollection = angularFireStore.collection<Track>('profileCollection');
     this.files = this.ngFirestoreCollection.valueChanges();
   }
 

@@ -11,6 +11,7 @@ export interface Track {
   progress: number;
   audioTitle:string;
   audioDescription:string;
+  userName:string;
 
 }
 

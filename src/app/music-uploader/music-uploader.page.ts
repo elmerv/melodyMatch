@@ -12,7 +12,6 @@ export interface FILE {
   filePath: string;
   size: number;
   audioTitle:string;
-  audioDescription:string;
   isPlaying:boolean;
   progress: number;
   imageUrl:string;
@@ -50,7 +49,7 @@ export class MusicUploaderPage implements OnInit {
       this.isAudioUploading = false;
       this.isAuidoUploaded = false;
 
-      this.ngFirestoreCollection = angularFirestore.collection<FILE>('soundbytesCollection');
+      this.ngFirestoreCollection = angularFirestore.collection<FILE>('profileCollection');
       this.files = this.ngFirestoreCollection.valueChanges();
      }
      fileUpload(event: FileList){
@@ -78,7 +77,6 @@ export class MusicUploaderPage implements OnInit {
               filePath: resp,
               size: this.FileSize,
               audioTitle:this.audioTitle,
-              audioDescription:this.audioDescription,
               isPlaying: false,
               progress:0,
               imageUrl:"https://images.unsplash.com/photo-1601288496920-b6154fe3626a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZmFjZXN8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80",

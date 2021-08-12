@@ -1,5 +1,5 @@
 ion-content {
-    --background: url('../../assets/Images/laser-dj-lights-1024x720.jpeg') no-repeat top center/cover fixed, #fff;
+    --background: url('https://t3.ftcdn.net/jpg/02/23/60/54/360_F_223605406_nGKtPp42ZRx4ZxvrcVeT3Ek6V5Uw4ETh.jpg') no-repeat top center/cover fixed, #fff;
     position: relative;
     height: 100%;
     width: 100%;
@@ -10,7 +10,7 @@ ion-toolbar {
 }
 
 ion-chip {
-    --background: #4287f5;
+    --background: #6910FA;
     --color: #fff;
 }
 
@@ -32,7 +32,6 @@ ion-chip {
                 border-radius: 50%;
                 position: absolute;
                 bottom: calc(-1*(80px + 4px));
-                border: 8px solid #4287f5;
                 background-color: #fff;
             }
         }
@@ -74,10 +73,13 @@ ion-chip {
     text-align: center;
 }
 
-#audioTitle{
-    color:#4781F7;
-}
+// #audioTitle{
+//     color:#6910FA;
+// }
+#addMusicButton{
+    --background: #6910FA;
 
+}
 #audioDesc{
     color:grey;
 }
