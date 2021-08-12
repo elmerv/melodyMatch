@@ -29,6 +29,8 @@ ion-item {
     height: 100px;
     border-radius: 5%;
     margin-top:5%;
+    object-fit: cover;
+
 }
 .messageButton{
     width:75%;
@@ -40,5 +42,6 @@ ion-item {
 .musicSlider{
     --bar-background: #6910FA;
 }
-.userName{
+#title{
+    margin-left: 10px;
 }

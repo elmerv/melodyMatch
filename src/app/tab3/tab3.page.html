@@ -12,7 +12,7 @@
   </ion-header> -->
 
   <ion-fab horizontal="end" vertical="top" slot="fixed">
-    <ion-fab-button id = "addMusicButton" [routerLink]="['/music-uploader']">
+    <ion-fab-button id="addMusicButton" [routerLink]="['/music-uploader']">
       <ion-icon name="musical-notes"></ion-icon>
       <ion-icon name="add"></ion-icon>
 
@@ -46,29 +46,13 @@
       </ion-chip>
     </div>
     <ion-card *ngFor="let track of files | async" color="dark">
-      <ion-card-title class="musicText" id="audioTitle"
-        >{{track.audioTitle}}</ion-card-title
-      >
+      <ion-card-title class="musicText" id="audioTitle">{{track.audioTitle}}</ion-card-title>
       <ion-item>
-        <ion-icon
-          name="play-outline"
-          (click)="togglePlayer(false,track)"
-          *ngIf="!track.isPlaying "
-        ></ion-icon>
-        <ion-icon
-          name="pause-circle-outline"
-          (click)="togglePlayer(true,track)"
-          *ngIf="track.isPlaying "
-        ></ion-icon>
+        <ion-icon name="play-outline" (click)="togglePlayer(false,track)" *ngIf="!track.isPlaying "></ion-icon>
+        <ion-icon name="pause-circle-outline" (click)="togglePlayer(true,track)" *ngIf="track.isPlaying "></ion-icon>
 
-        <ion-range
-          max="100"
-          name="{{track.filePath}}"
-          #range
-          [(ngModel)]="track.progress"
-          (touchend)="seek(track)"
-          (mouseup)="seek(track)"
-        ></ion-range>
+        <ion-range max="100" name="{{track.filePath}}" #range [(ngModel)]="track.progress" (touchend)="seek(track)"
+          (mouseup)="seek(track)"></ion-range>
       </ion-item>
     </ion-card>
   </div>

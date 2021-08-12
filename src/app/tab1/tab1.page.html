@@ -1,14 +1,19 @@
 
 <ion-header >
+  <ion-toolbar>
+    <ion-title id = "appName">
+      Melody Match
+    </ion-title>
+  </ion-toolbar>
 </ion-header>
-<ion-content fullscreen>
+<ion-content>
   <h2>Genres</h2>
   <ion-slides class="slides" [options]="option">
     <ion-slide *ngFor="let keys of genres" class="eachSlide" [routerLink]="['/soundbytes']">
-      <a>
+      <div id = "container">
         <img src={{keys.photo}} class="albumPhoto">
         <h2 class="name">{{keys.name}}</h2>
-      </a>
+      </div>
     </ion-slide>
   </ion-slides>
 
