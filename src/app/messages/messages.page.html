@@ -1,88 +1,22 @@
-<!-- <ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
+    <ion-title></ion-title>
+    <ion-back-button slot="start"> </ion-back-button>
   </ion-toolbar>
 </ion-header>
-<ion-content>
-  <ion-grid>
-    <ion-row>
-    <ion-list>
-      <ion-item *ngFor = "let blog of blogs">
-       <ion-label>
-         <p class="msgText">{{blog}}</p>
-       </ion-label>
-     </ion-item>
-    </ion-list>
-    </ion-row>
-  </ion-grid>
-    <ion-item class="txtBar">
-      <ion-textarea [(ngModel)] = "currentInput" placeholder="placeholder"></ion-textarea>
-    </ion-item>
-  
-    <button class="txtSendButton" expand="full" color="secondary" (click) = "addBlog()">Send</button>
-</ion-content> -->
 
-
-
-<ion-header id="header">
-  <ion-toolbar>
-    <!-- <ion-title>Create Thread</ion-title> -->
-   <ion-back-button> </ion-back-button> 
-   <h1>Recent Messages</h1> 
-  </ion-toolbar>
-</ion-header>
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">  
-  </ion-header>
 
- 
-<!-- drop down menu for topic -->
-<!-- <div class="text">
-  <h3 >Whats Your Topic?</h3>
+<div class = "chatBoxes" *ngFor="let blog of blogs">
+  <p>{{blog}}</p>
 </div>
-  <ion-list>
-    <ion-item> -->
-      <!-- <ion-label>Pet</ion-label> -->
-      
-      <!-- <ion-select value="dog">
-       
-        <ion-select-option value="cat" class="text">Cat</ion-select-option>
-        <ion-select-option value="dog" class="text">Dog</ion-select-option>
-        </ion-select>
-      </ion-item>
-    </ion-list> -->
 
-  
-  <!-- User title input
-<h3>Pick a Title!</h3>
-<ion-list>
-  <ion-item>
-    <ion-textarea [(ngModel)] = "currentInput" placeholder="placeholder"></ion-textarea>
-  </ion-item>
-  </ion-list> -->
-
-  <!-- Input a description  -->
-
-    <!-- <h3>Thread description!</h3> -->
-    <ion-list>
-      <ion-item>
-        <ion-textarea [(ngModel)] = "currentInput2" placeholder="placeholder"></ion-textarea>
-      </ion-item>
-      <ion-button expand="full" color="secondary" (click) = "addBlog()">send message!</ion-button>
-    </ion-list>
-
-
-  <!-- Recent Blogs -->
-    <ion-list>
-    <ion-list-header>
-      Recent messages
-    </ion-list-header>
-    <ion-item *ngFor  = "let blog of blogs" >
-      <ion-label>
-        <p>{{blog.currentInput2}}</p>
-        <!-- <p>{{blog.currentInput2}}</p> -->
-      </ion-label>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-item>
+      <ion-input [(ngModel)]="currentInput" placeholder="Message"></ion-input>
+      <ion-icon name="arrow-forward-circle-outline" (click)="addBlog()"></ion-icon>
     </ion-item>
-   </ion-list>
+  </ion-toolbar>
+</ion-footer>

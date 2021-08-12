@@ -1,0 +1,33 @@
+.cards{
+    background-color: black;
+    color:white;
+}
+.musicPlayers{
+    --ion-background-color:green !important;
+}
+
+ion-item {
+    --ion-background-color: black !important;
+    --ion-border-bottom: black !important;
+    --border-width: 0;
+    --inner-border-width: 0;
+    color:white;
+    display: inline-block;
+}
+.imageItem{
+    border-bottom: none !important;
+}
+.title{
+    font-family: 'Hind', sans-serif;
+    margin-left: 6%;
+}
+.profilePic{
+    width: 100px;
+    height: 100px;
+    border-radius: 5%;
+    margin-top:5%;
+}
+.messageButton{
+    width:45%;
+    --ion-background-color: purple;
+}

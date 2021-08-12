@@ -1,173 +1,35 @@
-#guitar{
-  position: absolute;
-  height: 80px;
-  width: 110px;
-  
-  top: 20px;
-  left: 30px;
-  border-radius: 10px; 
-}
-
-
-
-#drums{
-  position: absolute;
-  height: 100px;
-  width: 110px;
-  top: 20px;
-  left: 150px;
-  right: 36.27%;
-  border-radius: 10px; 
-
-}
-
-#piano{
-  position: absolute;
-  height: 100px;
-  width: 110px; 
-   top: 20px;
-  right: 13px;
-  border-radius: 10px; 
-}
-
-
-// #featuredArtists {
-//   // background-color: white;
-//     height: 100%;
-//     margin-top: -25px;
-//   }
-
-//   .swiper-slide {
-//     display: block;
-//   }
-
-
-//   .profilePictures{
-//     position: absolute;
-//     width: 100%;
-//     height: 170px;
-//     left: 13px;
-//     top: 237px;
-//     border-radius: 10px;  
-//     overflow: hidden;
-//     max-width: 80%;
-    
-//   }
-
-// .name{
-// position: absolute;
-// width: 115px;
-// height: 21px;
-// margin-left: 50px;
-// top: 395px;
-
-// font-family: ABeeZee;
-// font-style: italic;
-// font-weight: normal;
-// font-size: 18px;
-// line-height: 21px;
-
-// color: grey;
-// }
-
-// .desc{
-//   position: absolute;
-// width: 128px;
-// height: 21px;
-// left: 23px;
-// top: 435px;
-// margin-left: 25px;
-// font-family: ABeeZee;
-// font-style: italic;
-// font-weight: normal;
-// font-size: 18px;
-// line-height: 21px;
-
-// color: #808080;
-// }
-
-
-
-// #featuredAlbums {
-//   // background-color: white;
-  
-//     // top: 100px;
-//   }
-
-//   .albumPhoto{
-//     position: absolute;
-//     width: 100%;
-//     height: 170px;
-//     left: 13px;
-//     // top: 237px;
-//     border-radius: 10px;  
-//     overflow: hidden;
-//     max-width: 80%;
-//   }
-
-//   .albumname{
-//     position: absolute;
-//     width: 115px;
-//     height: 21px;
-//     margin-left: 50px;
-//     // top: 395px;
-    
-//     font-family: ABeeZee;
-//     font-style: italic;
-//     font-weight: normal;
-//     font-size: 18px;
-//     line-height: 21px;
-    
-//     color: grey;
-//     }
-
-
-
-
-
-
-// #categories{
-//   text-align: center;
-//   #category1{
-// float: left;
-// background-color: honeydew;
-// height: 100%;
-// width: 80px;
-//   }
-//   #category2{
-// display: inline;
-// background-color: hotpink;
-// // height: 100%;
-// // width: 80px;
-//   }
-//   #category3{
-// float: right;
-// background-color: indigo;
-// height: 100%;
-// width: 80px;
-//   }
-// }
-
-#featuredArtists{
-top: 150px;
-margin-left: 20px;
-}
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@600&display=swap');
 
 a, a:hover, a:focus, a:active {
   text-decoration: none;
   color: inherit;
 }
 
-
+.title{
+  position:absolute;
+  left: 30px;
+  top: 30px;
+}
+h2{
+  font-family: 'Hind', sans-serif;
+}
 .swiper-slide img {
+  position: relative;
   float: left;
   width:  250px;
-  height: 170px;
+  height: 260px;
   object-fit: cover;
   border-radius: 5%;
-  margin: 10px 0 20px
+  margin: 10px 10px;
 }
 
-#eachSlide{
+.name{
+  font-family: 'Hind', sans-serif;
+  position: relative;
+  right: 50px;
+  bottom: 60px;
+  color:white;
+}
+.eachSlide{
   margin-right: 30px;
 }

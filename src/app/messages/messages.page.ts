@@ -8,28 +8,23 @@ import keys from '../profileinfo/profileInfo';
   styleUrls: ['./messages.page.scss'],
 })
 export class MessagesPage implements OnInit {
-  
+
   
   artist: any[] = keys.key3;
-ngOnInit(){
 
-}
 
   blogs : string[] = [];
-  currentInput;
-  currentInput2;
+  currentInput = "";
+  
   constructor() {}
+
   addBlog(){
+    this.blogs.push(this.currentInput);
 
+    this.currentInput = "";
 
-  let finalBlog: any ={
-    currentInput:this.currentInput,
-   currentInput2:this.currentInput2
   }
- this.blogs.push(finalBlog);
+  ngOnInit(){
 
- this.currentInput ="";
- this.currentInput2 = "";
-
-}
+  }
 }

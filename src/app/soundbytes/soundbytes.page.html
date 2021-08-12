@@ -6,18 +6,23 @@
 </ion-header>
 
 <ion-content>
+  <ion-card class = "cards" *ngFor="let track of files | async" color="dark">
+    <ion-item class = "imageItem">
+        <img class = "profilePic" src="{{track.imageUrl}}" />
 
+    </ion-item>
+      <ion-button class = "messageButton">
+         Message
+        <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+      </ion-button> 
 
+      <h5 class = "title">{{track.audioTitle}}</h5>
+    <ion-item class = "musicPlayer">
+        <ion-icon name="play" (click)="togglePlayer(false,track)" *ngIf="!track.isPlaying"></ion-icon>
+        <ion-icon name="pause" (click)="togglePlayer(true,track)" *ngIf="track.isPlaying "></ion-icon>
 
-  <ion-card *ngFor="let track of files | async" color="dark"> 
-    <ion-card-title class="musicText" id="audioTitle">{{track.audioTitle}}</ion-card-title>
-    <ion-card-content class="musicText" id="audioDesc ">{{track.audioDescription}}</ion-card-content>
-    <ion-item> 
-    <ion-icon name="play-outline" (click)="togglePlayer(false,track)" *ngIf="!track.isPlaying "></ion-icon>
-    <ion-icon name="pause-circle-outline" (click)="togglePlayer(true,track)" *ngIf="track.isPlaying "></ion-icon>
- 
-  <ion-range max="100" name={{track.filePath}} #range [(ngModel)]="track.progress" (touchend)="seek(track)"
-    (mouseup)="seek(track)"></ion-range>
-  </ion-item> 
-</ion-card>
+        <ion-range max="100" name="{{track.filePath}}" #range [(ngModel)]="track.progress" (touchend)="seek(track)"
+          (mouseup)="seek(track)"></ion-range>
+    </ion-item>
+  </ion-card>
 </ion-content>

@@ -33,7 +33,7 @@ const routes: Routes = [
   {
     path: 'soundbytes',
     loadChildren: () => import('./soundbytes/soundbytes.module').then( m => m.SoundbytesPageModule)
-  },
+  }
 ];
 @NgModule({
   imports: [

@@ -41,28 +41,34 @@ let artist: any [] = [
     },
     {
       name:"Piano",
-      photo:"https://www.pianogallery.com/wp-content/uploads/2018/04/How-to-Describe-Sound-of-Piano.jpg",
+      phot:"https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
     }
-      // vocalistPhoto:"",
-      // dj:"",
 
     ];
 
 let genres: any = [
   {
-    name:"hipHop",
-    photo:"https://www.djmikebills.com/media/k2/items/cache/f75f45065e491a3adc61e72a384867bb_L.jpg",
+    name: "Pop", 
+    photo: "https://images.pexels.com/photos/243989/pexels-photo-243989.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
   },
   {
-    name:"rnb",
-    photo:"https://direct.rhapsody.com/imageserver/images/alb.323708239/600x600.jpg",
+    name:"Hip Hop",
+    photo:"https://images.unsplash.com/photo-1551853979-e62763e84352?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80",
   },
   {
-    name:"rock",
-    photo:"https://s01.sgp1.cdn.digitaloceanspaces.com/article/106521-ibugdylfkr-1543134227.jpg",
-    // urbanPhoto:"",
-    // jazzPhoto:"",
+    name: "Rap", 
+    photo: "https://images.pexels.com/photos/1238980/pexels-photo-1238980.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+  },
+  {
+    name: "EDM", 
+    photo: "https://images.unsplash.com/photo-1501527459-2d5409f8cf9f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80"
+  }, 
+
+  {
+    name:"Rock",
+    photo:"https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
   }
+
   ];
 let keys = {
   key1:instruments,

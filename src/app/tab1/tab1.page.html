@@ -1,26 +1,10 @@
-<ion-header [translucent]="true">
+
+<ion-header >
 </ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-  </ion-header>
- 
-
-
-
-  <ion-slides [options]="option" id="featuredArtists" [routerLink] = "['/soundbytes']">
-    <ion-slide *ngFor="let keys of instruments" id="eachSlide">
-      <a>
-
-      <img src={{keys.photo}} class="artistPhoto">
-      <h2 class="name">{{keys.name}}</h2>
-    </a>
-    </ion-slide>
-  </ion-slides>
-
-
-  <ion-slides [options]="option" id="featuredArtists">
-    <ion-slide *ngFor="let keys of genres" id="eachSlide">
+<ion-content fullscreen>
+  <h2>Genres</h2>
+  <ion-slides class="slides" [options]="option">
+    <ion-slide *ngFor="let keys of genres" class="eachSlide" [routerLink]="['/soundbytes']">
       <a>
         <img src={{keys.photo}} class="albumPhoto">
         <h2 class="name">{{keys.name}}</h2>
@@ -28,6 +12,15 @@
     </ion-slide>
   </ion-slides>
 
+  <h2>Instruments</h2>
+  <ion-slides [options]="option">
+    <ion-slide *ngFor="let keys of instruments" class="eachSlide" [routerLink]="['/soundbytes']">
+      <a>
+        <img src={{keys.photo}} class="artistPhoto"/>
+        <h2 class="name">{{keys.name}}</h2>
+      </a>
+    </ion-slide>
+  </ion-slides>
 
 
 

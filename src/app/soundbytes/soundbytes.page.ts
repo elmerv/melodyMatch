@@ -11,6 +11,7 @@ export interface Track {
   progress: number;
   audioTitle:string;
   audioDescription:string;
+
 }
 
 @Component({
@@ -82,6 +83,7 @@ export class SoundbytesPage  {
       const rangeElement = this.range.find(element => element.name == track.filePath);
       const newValue = +rangeElement.value;
       const duration = this.player.duration();
+      console.log(duration/60);
       this.player.seek(duration *(newValue/100));
     }
     updateProgress(track: Track){

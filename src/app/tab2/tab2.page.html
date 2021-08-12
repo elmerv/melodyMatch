@@ -5,9 +5,9 @@
 </ion-header>
 
 <ion-content >
-  <ion-item *ngFor = "let artist of artist" id="artistLoop"> 
+  <ion-item *ngFor = "let artist of artist" id="artistLoop" [routerLink] = "['/messages']"> 
     <ion-avatar slot="start">
-      <img src= {{artist.picture}} [routerLink] = "['../../messages']" id="artistPicture">
+      <img src= {{artist.picture}}  id="artistPicture">
     </ion-avatar>
     <ion-label>
       <p id="artistName">{{artist.name}}</p>
