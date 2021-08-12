@@ -49,7 +49,7 @@ export class MusicUploaderPage implements OnInit {
       this.isAudioUploading = false;
       this.isAuidoUploaded = false;
 
-      this.ngFirestoreCollection = angularFirestore.collection<FILE>('profileCollection');
+      this.ngFirestoreCollection = angularFirestore.collection<FILE>('dummyCollection');
       this.files = this.ngFirestoreCollection.valueChanges();
      }
      fileUpload(event: FileList){

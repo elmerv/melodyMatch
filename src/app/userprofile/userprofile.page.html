@@ -35,7 +35,17 @@
         <ion-label>Singer</ion-label>
       </ion-chip>
     </div>
-    <ion-button expand="block" color="primary">Message</ion-button>
+    <ion-button expand="block" color="primary" [routerLink] = "['/messages']">Message</ion-button>
+    <ion-card *ngFor="let track of files | async" color="dark">
+      <ion-card-title class="musicText" id="audioTitle">{{track.audioTitle}}</ion-card-title>
+      <ion-item>
+        <ion-icon name="play-outline" (click)="togglePlayer(false,track)" *ngIf="!track.isPlaying "></ion-icon>
+        <ion-icon name="pause-circle-outline" (click)="togglePlayer(true,track)" *ngIf="track.isPlaying "></ion-icon>
+  
+        <ion-range max="100" name="{{track.filePath}}" #range [(ngModel)]="track.progress" (touchend)="seek(track)"
+          (mouseup)="seek(track)"></ion-range>
+      </ion-item>
+    </ion-card>
   </div>
 
 
