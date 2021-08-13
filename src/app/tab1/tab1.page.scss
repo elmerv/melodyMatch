@@ -27,10 +27,12 @@ h2{
   margin: 10px 10px;
 
 }
-
-ion-content{
-  --background: url("../../assets/Images/background.png") 0 0/100% 100% no-repeat;
-
+ion-toolbar {
+  background-color: black;
+}
+ion-content {
+  --background: url('https://i.ibb.co/LpFPy8H/Mask-Group-1.png') 0 0/100% 100%
+    no-repeat;
 }
 .name{
   font-family: 'Hind', sans-serif;
