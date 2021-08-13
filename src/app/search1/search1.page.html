@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      search
+    </ion-title>  
+    <ion-searchbar showCancelButton="focus" (ionChange)="_ionChange($event)"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+  <ion-item *ngFor= "let item of searchedItem"> {{item.title}} </ion-item>
+  </ion-list>
+  </ion-content>
+
+  <!-- <app-explore-container name="search page"></app-explore-container> -->
+</ion-content>

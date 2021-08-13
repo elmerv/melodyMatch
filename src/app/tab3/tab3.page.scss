@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sarina&display=swap");
+ion-content {
+  --background: url("https://t3.ftcdn.net/jpg/02/23/60/54/360_F_223605406_nGKtPp42ZRx4ZxvrcVeT3Ek6V5Uw4ETh.jpg")
+      no-repeat top center/cover fixed,
+    #fff;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+ion-toolbar {
+  background: transparent;
+}
+
+ion-chip {
+  --background: #6910fa;
+  --color: #fff;
+}
+
+.card {
+  margin: 0 auto;
+
+  .header {
+    height: 200px;
+
+    .avatar {
+      width: 160px;
+      height: 160px;
+      position: relative;
+      margin: 0 auto;
+
+      img {
+        display: block;
+        border-radius: 50%;
+        position: absolute;
+        bottom: calc(-1 * (80px + 4px));
+        background-color: #fff;
+      }
+    }
+  }
+}
+
+.card-body {
+  background-color: #ffffff;
+  padding: 30px;
+  height: 100%;
+  overflow: hidden;
+
+  .user-meta {
+    padding-top: 40px;
+
+    .profileName {
+      font-size: 24px;
+      font-weight: 600;
+      color: #303940;
+    }
+
+    .profileDescription {
+      font-size: 90%;
+      color: #949ea6;
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+  }
+}
+.ranking {
+  color: black;
+}
+
+.songList {
+  background-color: khaki;
+}
+
+// #audioTitle{
+//     color:#6910FA;
+// }
+#addMusicButton {
+  --background: #6910fa;
+}
+#audioDesc {
+  color: grey;
+}
+.musicSlider {
+  --bar-background: #6910fa;
+}
+ion-item {
+  --background: black;
+}
+ion-card {
+  --background: black;
+  margin-left: -5.5vw;
+  width: 95vw;
+}
+ion-card-title {
+  font-family: "Hind", sans-serif;
+  text-align: left;
+  color: white;
+  font-size: 20px;
+  margin-left: 25px;
+  margin-top: 20px;
+}
+.musicPlayer {
+  color: white;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-back-button slot="start"></ion-back-button>
+    <ion-title>soundbytes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class = "cards" *ngFor="let track of files | async" color="dark">
+
+    
+
+<div class="imgdiv"><img class = "profilePic" src="{{track.imageUrl}}" [routerLink] = "['/userprofile']"/></div>
+      <div class="infodiv"><h4 class = "userName">{{track.userName}}</h4>
+
+  
+
+        <ion-button  [routerLink] = "['/messages']" class = "messageButton">
+           Message
+          <ion-icon class="bubble" name="chatbubble-ellipses-outline"></ion-icon>
+        </ion-button> </div>
+      
+
+      <h5 class = "title">{{track.audioTitle}}</h5>
+    <ion-item class = "musicPlayer">
+        <ion-icon name="play" (click)="togglePlayer(false,track)" *ngIf="!track.isPlaying"></ion-icon>
+        <ion-icon name="pause" (click)="togglePlayer(true,track)" *ngIf="track.isPlaying "></ion-icon>
+
+        <ion-range class = "musicSlider" max="100" name="{{track.filePath}}" #range [(ngModel)]="track.progress" (touchend)="seek(track)"
+          (mouseup)="seek(track)"></ion-range>
+    </ion-item>
+  </ion-card>
+</ion-content>
