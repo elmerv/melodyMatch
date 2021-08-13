@@ -23,3 +23,8 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+:root {
+    ion-back-button {
+        --color: #6910FA !important;
+    }
+  }

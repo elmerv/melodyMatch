@@ -1,14 +1,21 @@
 
-ion-icon{
-    color:#6910FA;
-}
-ion-icon::after{
-    color: #1c0346;
-}
-ion-label{
-    color:#6910FA;
-}
-ion-label::after{
-    color: #1c0346;
+// ion-icon{
+//     color:#6910FA;
+// }
+// ion-icon::after{
+//     color: #1c0346;
+// }
+// ion-label{
+//     color:;
+// }
+// ion-label::after{
+//     color: #1c0346;
+
+// }
+
+ion-tab-button {
+    // Icon and text
+    -–color: #6910FA;
+    --color-selected:#4c00c7;
 
 }

@@ -4,7 +4,13 @@ a, a:hover, a:focus, a:active {
   text-decoration: none;
   color: inherit;
 }
-
+#logo{
+  width:60px;
+  height: 67px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 h2{
   font-family: 'Hind', sans-serif;
   margin-left: 5%;
@@ -19,13 +25,12 @@ h2{
   object-fit: cover;
   border-radius: 5%;
   margin: 10px 10px;
+
 }
 
 ion-content{
-  // --ion-background-color:#111D12;
   --background: url("../../assets/Images/background.png") 0 0/100% 100% no-repeat;
 
-  // --ion-background: url("../../assets/Images/background.png");
 }
 .name{
   font-family: 'Hind', sans-serif;
@@ -40,7 +45,8 @@ ion-content{
 }
 
 ion-toolbar {
-  font-family: 'Sarina', cursive;
+  font-family: 'Hind', sans-serif;
+  font-weight: 600;
   color:white;
   --background: transparent;
   --ion-color-base: transparent !important;

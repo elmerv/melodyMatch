@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title> Tab 3 </ion-title>
+    <ion-title> Profile </ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -11,13 +11,6 @@
     </ion-toolbar>
   </ion-header> -->
 
-  <ion-fab horizontal="end" vertical="top" slot="fixed">
-    <ion-fab-button id="addMusicButton" [routerLink]="['/music-uploader']">
-      <ion-icon name="musical-notes"></ion-icon>
-      <ion-icon name="add"></ion-icon>
-
-    </ion-fab-button>
-  </ion-fab>
 
   <div class="card">
     <div class="header">
@@ -53,5 +46,13 @@
           (mouseup)="seek(track)"></ion-range>
       </ion-item>
     </ion-card>
+ 
   </div>
+  <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+    <ion-fab-button id="addMusicButton" [routerLink]="['/music-uploader']">
+      <ion-icon name="musical-notes"></ion-icon>
+      <ion-icon name="add"></ion-icon>
+
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>
