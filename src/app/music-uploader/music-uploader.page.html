@@ -1,7 +1,8 @@
 <ion-header>
   
   <ion-toolbar> 
-    <ion-back-button slot="start" ></ion-back-button>
+    <ion-back-button defaultHref = "tabs/tab3" slot="start" ></ion-back-button>
+    <ion-title>Upload Audio</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -19,18 +20,19 @@
  
 
   <ion-card *ngIf="!isAudioUploading && !isAudioUploaded" class="uploader">
-    <ion-card-header color = "medium">
-      <ion-card-title id = "selectFile" >Select File</ion-card-title>
+    <ion-card-header id = "cardHeader">
+      <ion-card-title id = "selectFile" >Select Audio</ion-card-title>
     </ion-card-header>
 
-    <ion-button color="primary" id="uploadBanner">
+    <ion-button color="dark" id="uploadBanner">
+    
       <input type="file" class="upload" (change)="fileUpload($event.target.files)" />
     </ion-button>
   </ion-card>
 
   <ion-card *ngIf="isAudioUploading && !isAudioUploaded">
     <ion-card-header>
-      <ion-card-title>Files selected: <b>{{ FileName }}</b></ion-card-title>
+      <ion-card-title>Audio selected: <b>{{ FileName }}</b></ion-card-title>
     </ion-card-header>
 
     <ion-card-content>
